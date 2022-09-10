@@ -1,0 +1,24 @@
+---
+import dayjs from "dayjs";
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostList from "../../components/PostList.astro";
+
+const title = "Blog";
+const description = "Technical articles, code snippets, and writings on the things I'm learning.";
+
+const posts = await Astro.glob("./*.mdx");
+const nonDraftPosts = posts.filter((post) => !post.frontmatter.draft);
+const actualPosts =  import.meta.env.PROD ? nonDraftPosts : posts;
+
+const posts22 = actualPosts.filter(post => dayjs(post.frontmatter.pubDate).format("YYYY") == "2022");
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="max-w-screen-md flex flex-col gap-3">
+    <h1 class="text-5xl font-black text-green">{title}</h1>
+    <p class="max-w-prose">{description}</p>
+  </section>
+
+  <PostList heading="2022" posts={posts22} dateFormat="MMM D" />
+</BaseLayout>

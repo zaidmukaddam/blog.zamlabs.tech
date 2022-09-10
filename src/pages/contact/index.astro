@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { socialMedia } from "../../data";
+
+const title = "Contact";
+const description = "Software developer focused on building CLI tools and web applications.";
+const { Twitter: twitterUrl, LinkedIn: linkedinUrl } = socialMedia;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="flex flex-col md:flex-row gap-6 justify-between">
+    <section class="flex flex-col gap-3 max-w-prose">
+      <h1 class="text-5xl font-black text-blue">{title}</h1>
+      <p>Want to work on cool stuff? Reach out!</p>
+      <p>
+        I'm always open to meeting new people and working on new projects. Don't hesitate to contact me if you want to
+        have a chat.
+      </p>
+      <p>
+        You can also reach out via <a
+          class="font-semibold text-blue decoration-2 underline-offset-4 hover:underline"
+          href={twitterUrl}
+          target="_blank"
+          rel="noopener noreferrer">Twitter</a
+        >
+        or <a
+          class="font-semibold text-blue decoration-2 underline-offset-4 hover:underline"
+          href={linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer">LinkedIn</a
+        >.
+      </p>
+    </section>
+
+    <form name="contact" action="/contact/success" method="POST" data-netlify="true" class="flex flex-col gap-3 w-full">
+      <label class="flex flex-col">
+        <span class="font-extrabold">Name</span>
+        <input type="text" name="name" class="bg-black focus:border-blue" required />
+      </label>
+      <label class="flex flex-col">
+        <span class="font-extrabold">Email</span>
+        <input type="email" name="email" class="bg-black focus:border-blue" required />
+      </label>
+      <label class="flex flex-col">
+        <span class="font-extrabold">Message</span>
+        <textarea name="message" class="bg-black h-32 focus:border-blue" required></textarea>
+      </label>
+      <button type="submit" class="mt-3 text-center w-24 font-extrabold px-3 py-2 bg-black hover:text-blue">
+        Submit
+      </button>
+    </form>
+  </div>
+</BaseLayout>

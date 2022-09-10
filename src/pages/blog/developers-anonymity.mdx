@@ -1,0 +1,99 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Why Developers Might Misunderstand Anonymity
+author: Zaid Mukaddam
+pubDate: 2022-09-10
+comments: true
+---
+
+# Why Developers Might Misunderstand Anonymity
+
+<img src="/images/developers-anonymity.png" alt="anonymous Logo" class="rounded-xl" />
+
+Some security concepts seem pretty challenging to understand for a significant part of the population, including technical people.
+
+## You Said “IP”?
+
+As developers, you probably see that word every day.
+
+The IP address is the most common way to track people. To browse the web, you need an ISP (internet service provider). The ISP assigns you an IP, a unique ID tied to a real identity.
+
+Indeed, most of the time, you don’t get Internet access without telling the ISP your real name, email address, or current address.
+
+I know there are differences from one country to another and some ways to circumvent the process. However, it has been working like that for most people in this world for years.
+
+The ISP provides Internet access, and it keeps detailed logs of activities. It’s a legal duty in many countries. They must keep logs for years. Sometimes those records never expire.
+
+Besides, most platforms, such as social networks, keep track too. At any given time, if that’s required, it’s possible to track you down, where you were|are, what you did|do.
+
+As a result, it’s not surprising that more and more people try to hide their real IP addresses. They also want to hide their traffic from their ISP.
+
+That’s pretty much what VPN providers provide.
+
+The next step is to install [Tor](https://www.torproject.org/) if you know what you are doing.
+
+## The Number One Misbelief: Incognito Mode Is Safe
+
+Many browsers now have an “incognito mode”. A significant part of people read that at face value.
+
+> ### Now I’m incognito, why not watch some prOn
+
+Neither the HTTPS nor the incognito mode allows for being anonymous. The browser sends unencrypted DNS requests to get the content.
+
+Your prOn habits are anything but private. The ISP keeps track of that too.
+
+The worst-case scenario I’ve heard about is people connected to Gmail while watching nasty stuff with the incognito mode. What a terrible choice.
+
+I don’t want to insist too much on that prOn topic, but prOn tubes collect highly strategic data for a massive amount of traffic every day.
+
+You don’t do that business like it’s nothing, and for users, browsing those platforms is not without consequences.
+
+Of course, it’s not all about prOn. As developers, we are part of the problem, somehow, as we use telemetry, trackers, fingerprinting techniques, sometimes without always knowing what runs behind the scene.
+
+## The VPN Is Not The Ultimate Shield
+
+In this post, I wrote about VPN and how some companies sell it with fallacious arguments, IMHO.
+
+VPN providers give you some “fake” IP, but it’s pretty much the same as with ISPs, especially if they don’t have a no-logs policy. There are files somewhere that say what you were doing online at specific timestamps.
+
+Data leaks are not rare with VPN providers, so it’s not only about the police investigating your activities. It can be script kiddies too.
+
+## Tor Is Not Invincible
+
+Tor does a lot of good for so many people all over the world, and it’s not just for privacy. It has saved lives, giving some headaches to authorities in dictatorships, but not only.
+
+Tor has popularized the concept of “onion routing” describing itself as:
+
+> #### the world’s strongest tool for privacy and freedom online
+Onion routing consists of encapsulating data in several layers of encryption. Each layer contains the next destination, and each node is only aware of the preceding.
+
+Unlike with ISPs or VPN providers, you don’t have a man in the middle that can access everything.
+
+That’s pretty cool, but even the most robust system can fail, and that already happened. Known techniques, such as _correlation attacks_, have successfully defeated Tor.
+
+However, here that’s not my point. The problem is your potential misuse of _Tor Hidden DNS Service_.
+
+While some people use it for valid reasons, such as activism or freedom of speech and privacy, various criminal activities rely on it (almost half of the onion websites).
+
+Using Tor is not sufficient to be “incognito”! It’s far better than the browser’s incognito mode, but still, it might not be the digital safe you think.
+
+It’s just the first step, and if you don’t know what you’re doing or how to configure it properly, you will take a dangerous road, exposing yourself to both the police and criminals.
+
+I’m writing that because I had this conversation with people (different ages, different jobs) that seemed excited with buzz words such as _deep web_ or _dark web_ and told me they’re not fools cause they use Tor.
+
+Indeed you find pretty much everything on those hidden parts of the web, including detailed documentation about real techniques of hacking, not just proofs of concept.
+
+Believe it or not, some people go there for the wrong reasons, but it’s not to do illegal stuff. It’s curiosity, just for the thrill!
+
+## You Are Probably Not Mr. Robot
+I wanted to write that post mainly to discourage hazardous attempts to explore the wrong places, as it can be tempting for any curious developer.
+
+The more you read about this topic, the more things get scary. My advice is to be humble, stay safe, learn the risks, and how to use those tools before jumping in.
+
+Somebody told me there are well-informed people that are willing to teach that. For example, this [PDF is a pretty good introduction](https://anonymousplanet.org/guide.pdf).
+
+## Wrap Up
+
+There are sharp tools to get more privacy, but they are not bulletproof.
+
+If you don’t know what you are doing, using Tor to browse the dark side of the moon, just for the thrill or actually to do illegal stuff, is a considerable risk.
