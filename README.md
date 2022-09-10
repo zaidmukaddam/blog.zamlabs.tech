@@ -12,7 +12,7 @@ powered by [giscus][giscus].
 
 This project is open source and available under the [MIT License][license].
 
-[pierolescano]: https://blog.zamlabs.tech
+[zaid]: https://blog.zamlabs.tech
 [astro]: https://astro.build
 [tailwind]: https://tailwindcss.com
 [react]: https://reactjs.org
