@@ -1,24 +1,24 @@
 @font-face {
-  font-family: "Noto Sans";
+  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("/fonts/NotoSans-Medium.tff") format("tff");
+  src: local(""), url("/fonts/JetBrainsMono-Medium.tff") format("tff");
 }
 @font-face {
-  font-family: "Noto Sans";
+  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("/fonts/NotoSans-ExtraBold.tff") format("tff");
+  src: local(""), url("/fonts/JetBrainsMono-ExtraBold.tff") format("tff");
 }
 @font-face {
-  font-family: "Noto Sans";
+  font-family: "JetBrains Mono";
   font-style: italic;
   font-weight: 400;
-  src: local(""), url("/fonts/NotoSans-MediumItalic.tff") format("tff");
+  src: local(""), url("/fonts/JetBrainsMono-MediumItalic.tff") format("tff");
 }
 @font-face {
-  font-family: "Noto Sans";
+  font-family: "JetBrains Mono";
   font-style: italic;
   font-weight: 700;
-  src: local(""), url("/fonts/NotoSans-ExtraBoldItalic.tff") format("tff");
+  src: local(""), url("/fonts/JetBrainsMono-ExtraBoldItalic.tff") format("tff");
 }

@@ -20,7 +20,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Noto Sans", ...defaultTheme.fontFamily.sans],
+        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
       spacing: {
         "5vw": "5vw",

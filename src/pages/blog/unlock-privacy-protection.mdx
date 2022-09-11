@@ -1,0 +1,63 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Your Inbox Is Not A Digital Safe"
+author: Zaid Mukaddam
+pubDate: 2022-09-08
+comments: true
+---
+
+# Your Inbox Is Not A Digital Safe
+
+The false impression of safety can have devastating consequences. Whether you are an activist or not, dedicated mail services and privacy measures are good practices, not shields to make war.
+
+## The Protonmail Scandal
+
+Last year, I’ve read about Protonmail, a secure email company based in Switzerland, that gave the IP address of a French activist to Swiss authorities after a request from Europol. While Protonmail does not log its users’ IP addresses, authorities can ask them to cooperate at any time.
+
+Any company must comply with the law.
+
+Even if the ProtonMail user notification policy “requires a user to be notified if a third party makes a request for their private data and such data is to be used in a criminal proceeding”, they delayed the notification by several months in this case.
+
+[Source: TechCrunch](https://techcrunch.com/2021/09/06/protonmail-logged-ip-address-of-french-activist-after-order-by-swiss-authorities/)
+
+In other words, the end ultimately justifies all means, and companies may [change their conditions](https://twitter.com/OpenTerms/status/1435181995294961666) at any time.
+
+You don’t create a Protonmail account to communicate stealthily and outrun authorities. The company provides an interesting end-to-end encryption, not undercover mailboxes for criminal activities. They have great products!
+
+The problem is not Protonmail but mass surveillance and the sacrifice of individual freedom in western democracies. I’m not even talking about Snowden revelations and the supposed secret backdoors, but just current laws.
+
+There are very dangerous people out there and authorities won’t stop hunting them. “Who decides who’s dangerous or not? Which activities are criminal? What can make you a person of interest?” are more relevant questions, to me. While there are certainly objective criteria such as whether or not you put other people’s life in danger, or if you are stealing money or confidential information, it’s ultimately their decision.
+
+## What Are NSL?
+National Security Letters (NSL) are requests by US three-letter agencies such as the FBI that do not require prior approval from a judge. These requests forbid the recipient of an NSL from disclosing the FBI had requested the information.
+
+[FISA](https://bja.ojp.gov/program/it/privacy-civil-liberties/authorities/statutes/1286) can also force companies to remain silent even if their privacy policy explicitly forbids it.
+
+Again, the end justifies the means, like this [UE Draft Law on the collection and storage of identification](https://www.globalencryption.org/2021/09/open-letter-48-organizations-and-cybersecurity-experts-call-on-the-belgian-government-to-halt-legislation-to-undermine-end-to-end-encryption/) that suggested operators of end-to-end encrypted systems undermine encryption to provide access to user communications.
+
+
+Fortunately, many organizations and cybersecurity experts protested and managed to halt legislation, but some politicians seriously put it forward as a measure against terrorism and cyber threats while it would only aggravate the threat.
+
+Email Companies Also Have Their Threat Model
+Email companies are constantly under attack by various threat actors. Their threat model may look like that:
+
+**Threat**|**Remediation**
+-----|-----
+sniffing|SSL/TLS
+phishing, viruses|digital signatures, CIA triad
+compromised accounts - leaked passwords|2FA, MFA, secret phrases
+mass surveillance - advanced attackers|encryption 4096 bits - E2EE
+compromised devices - zombie computers|0
+social engineering|0
+lost secret phrases or 2FA/MFA devices|0 or 1FA*
+Man In The Middle|0 or not much
+DDoS, malicious payloads|0
+
+I use `0` when the provider cannot guarantee a 100% protection but only mitigate the damage. If you care about privacy, it’s best if you can think about your own threat model too.
+
+_* 1FA is classic login/password_
+
+## Privacy Measures Can Look Suspicious
+You may raise the curiosity by taking pretty basic measures to protect your privacy. For many people and organizations, having a Protonmail account is sufficient to look suspicious.
+
+The same people might approve the “nothing to hide” argument. Depending on your goals, such privacy measure might not be the best move.
