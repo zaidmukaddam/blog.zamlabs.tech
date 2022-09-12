@@ -25,6 +25,8 @@ module.exports = {
       spacing: {
         "5vw": "5vw",
         "10vw": "10vw",
+        "15vw": "15vw",
+        "20vw": "20vw",
       },
     },
   },
